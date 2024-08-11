@@ -1,10 +1,14 @@
 # Re-Learning Python
-[Check out my Projects](#my-projects)
 
+[Check out my Projects](#my-projects)
+[Nested Data Structures](#nested-data-structures)
+[If-else statements](#rock-paper-scissors)
+[API handling](#maket-sentiments-api)
+[Web Scrapping](#events-scraper)
 This folder is a collection of the various stepping stones in python that are essential in developing your python techstack right from the start towards a comprehensive understanding of Data Science and the various packages and libraries related with it.
 The folder consists of numerous files detailed as below.
 
-1. Nested Data Structures.
+1. Nested Data Structures
    The essential python data structures that are crucial and important to python are
    - Lists - Array of items
    - Dictionary - Key-Value pairs
@@ -12,7 +16,7 @@ The folder consists of numerous files detailed as below.
 
    #Nested Data Structures, #Dictionary, #List
 
-2. Rock Paper Scissors.
+2. Rock Paper Scissors
    If Else statements and basic functions are demostrated in this simple terminal based gameplay.
    We represent the importance of packaging up our code in user-defined functions and its usability
 
@@ -20,13 +24,12 @@ The folder consists of numerous files detailed as below.
 
    #IF Else statements #Error handling #assert() for testing
 
-3. Market Sentiments API.
+3. Market Sentiments API
    In python API handling is one of the most crucial parts of Data Handling.
    In this file, we cover the basics of fetching and displaying data from a commonly used API i.e. AlphaVantage API.
    
    In APIs, the most important pass is passing a key to the API, which has to be done in such a manner that, in case of external interference the user key should not get leaked.
    We also touch upon that topic of safe key handling.
-
 
 
    APIs usually return data in JSON format. The JSON format looks something like this:
@@ -43,7 +46,7 @@ The folder consists of numerous files detailed as below.
    Finally we use this knowledge to fetch the necessary columns of data and print and display them as we need.
    #API Hanlding, #IPython console image display, #getpass
 
-4. Events Scraper (GWU).
+4. Events Scraper
    This file, is an example of handling the different types of data that can be fetch from any website. 
    For this example, we have utilized, the events page of George Washington Unniversity.
 
