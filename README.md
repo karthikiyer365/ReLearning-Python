@@ -1,5 +1,5 @@
 <h2><b>Re-Learning Python</b></h2>
-
+<h3> #Projects </h3>
 This folder is a collection of the various stepping stones in python that are essential in developing your python techstack right from the start towards a comprehensive understanding of Data Science and the various packages and libraries related with it.
 The folder consists of numerous files detailed as below.
 
@@ -60,7 +60,7 @@ The folder consists of numerous files detailed as below.
 
    
 
-<h3> Projects </h3>
+<h3> Projects #projects</h3>
 
    1. Google Playstore Analysis
       
