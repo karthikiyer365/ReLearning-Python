@@ -1,4 +1,4 @@
-#Re-Learning Python
+# Re-Learning Python
 [Check out my Projects](#my-projects)
 
 This folder is a collection of the various stepping stones in python that are essential in developing your python techstack right from the start towards a comprehensive understanding of Data Science and the various packages and libraries related with it.
