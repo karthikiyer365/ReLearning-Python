@@ -9,19 +9,20 @@ The folder consists of numerous files detailed as below.
 
 [If-else statements](#rock-paper-scissors)
 
-[API handling](#maket-sentiments-api)
+[API handling](#market-sentiments-api)
 
 [Web Scrapping](#events-scraper)
 
 
 ## Learning Python through tasks
+
 ### Nested Data Structures
    The essential python data structures that are crucial and important to python are
    - Lists - Array of items
    - Dictionary - Key-Value pairs
    This file is an important example of handling such data structures and their nested forms
 
-   #Nested Data Structures, #Dictionary, #List
+   #Nested Data Structure, #Dictionary, #List
 
 ### Rock Paper Scissors
    If Else statements and basic functions are demostrated in this simple terminal based gameplay.
