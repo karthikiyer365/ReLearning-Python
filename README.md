@@ -5,6 +5,8 @@ The folder consists of numerous files detailed as below.
 
 [My Projects](#my-projects)
 
+[Python Starter Pack](#python-101)
+
 [Nested Data Structures](#nested-data-structures)
 
 [If-else statements](#rock-paper-scissors)
@@ -15,6 +17,14 @@ The folder consists of numerous files detailed as below.
 
 
 ## Learning Python through tasks
+
+### Python 101
+   This is your starter pack to understanding the various parts of Python.
+
+   I help understand the base of Python, explaining it's universe and everything around it.
+   The file covers Data Types, Arthmetic Operations, Data Structures, Conditional Statements, Loops with examples to demostrate its working.
+
+   It also gives a walk through in working with Jupyter, Colab and similar colaborative notebook environments  
 
 ### Nested Data Structures
    The essential python data structures that are crucial and important to python are
