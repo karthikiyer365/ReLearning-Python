@@ -1,88 +1,61 @@
-# Re-Learning Python
+# Google Play Store — Marketspace Analysis
 
-This folder is a collection of the various stepping stones in python that are essential in developing your python techstack right from the start towards a comprehensive understanding of Data Science and the various packages and libraries related with it.
-The folder consists of numerous files detailed as below.
+2.3M+ apps, one CSV, no assumptions. A cell-by-cell walk from raw Kaggle export to
+clean findings on what actually drives ratings, installs, and app survival on the
+Play Store.
 
-[My Projects](#my-projects)
+📄 [`Google Playstore Analysis.py`](./Google%20Playstore%20Analysis.py) — the pipeline, runnable as a Jupyter/VS Code cell notebook
+📊 [Analysis PDF](./Google%20Play%20Store%20analysis.pdf) · [Write-up PDF](./Understanding%20Mobile%20Applications%20Marketspace%20-%20Google%20Play%20Store%20Data%20Analysis.pdf) — rendered output + narrative
 
-[Python Starter Pack](#python-101)
+## Quickstart
 
-[Nested Data Structures](#nested-data-structures)
+```bash
+pip install opendatasets numpy pandas matplotlib seaborn scikit-learn tabulate plotly
 
-[If-else statements](#rock-paper-scissors)
+# first run only — downloads the dataset, then comment this line back out
+python -c "import opendatasets as od; od.download('https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps')"
 
-[API handling](#market-sentiments-api)
+# open Google Playstore Analysis.py as a notebook (VS Code / Jupyter both read the `# %%` cells)
+```
 
-[Web Scrapping](#events-scraper)
+## The pipeline
 
+```
+Google-Playstore.csv  (2.3M rows × 24 cols)
+   │
+   v
+┌─────────────┐     ┌──────────────────┐     ┌────────────────────┐     ┌───────────────┐
+│  Ingest     │ ──> │  Clean            │ ──> │  Engineer           │ ──> │  Visualize     │
+│  read_csv   │     │  drop nulls,      │     │  Year/Month/App Age │     │  20+ charts:   │
+│             │     │  unit-normalize   │     │  Has_PrivacyPolicy  │     │  histograms,   │
+│             │     │  Size (M/K/G),    │     │  has_dev_website    │     │  treemap,      │
+│             │     │  dedupe Installs  │     │  rounded Android ver│     │  pie, boxen    │
+└─────────────┘     └──────────────────┘     └────────────────────┘     └───────────────┘
+```
 
-## Learning Python through tasks
+Full column-by-column breakdown, function names, and line numbers: [`docs/TOPICAL_MAP.md`](./docs/TOPICAL_MAP.md#map-c--per-feature-backend-processing).
 
-### Python 101
-   This is your starter pack to understanding the various parts of Python.
+## What the data says
 
-   I help understand the base of Python, explaining it's universe and everything around it.
-   The file covers Data Types, Arthmetic Operations, Data Structures, Conditional Statements, Loops with examples to demostrate its working.
+| Signal | Finding |
+|---|---|
+| Currency | 99.95% of listings priced in USD — everything else is noise |
+| Category | Education alone accounts for ~20% of all apps |
+| Ratings | Most rated apps sit between 3.5–5.0; a huge share have zero ratings at all |
+| Install volume | Long tail — most apps land in the 10–10,000 install range |
+| Million+ reviews | Only 829 of 2M+ apps clear a million ratings — and Action leads that club |
+| Update trend | App updates peaked in 2020 |
 
-   It also gives a walk through in working with Jupyter, Colab and similar colaborative notebook environments  
+## Repo map
 
-### Nested Data Structures
-   The essential python data structures that are crucial and important to python are
-   - Lists - Array of items
-   - Dictionary - Key-Value pairs
-   This file is an important example of handling such data structures and their nested forms
+| File | What it is |
+|---|---|
+| `Google Playstore Analysis.py` | The full EDA pipeline — clean, engineer, visualize |
+| `Google-Playstore.csv` | Raw source data (Kaggle: gauthamp10/google-playstore-apps) |
+| `Google Play Store analysis.pdf` | Rendered notebook output |
+| `Understanding Mobile Applications Marketspace...pdf` | Narrative write-up of findings |
+| `docs/TOPICAL_MAP.md` | ASCII flowcharts — product, dev, and per-cell processing topology |
+| `docs/PREFACTOR.md` | Doc coverage map — what's documented, what's a gap |
 
-   #Nested Data Structure, #Dictionary, #List
-
-### Rock Paper Scissors
-   If Else statements and basic functions are demostrated in this simple terminal based gameplay.
-   We represent the importance of packaging up our code in user-defined functions and its usability
-
-   Additionally, it also shows the basic assert() function used to test our functionality for runtime complexities by providing sample test-cases.
-
-   #IF Else statements #Error handling #assert() for testing
-
-### Market Sentiments API
-   In python API handling is one of the most crucial parts of Data Handling.
-   In this file, we cover the basics of fetching and displaying data from a commonly used API i.e. AlphaVantage API.
-   
-   In APIs, the most important pass is passing a key to the API, which has to be done in such a manner that, in case of external interference the user key should not get leaked.
-   We also touch upon that topic of safe key handling.
-
-
-   APIs usually return data in JSON format. The JSON format looks something like this:
-   {'Attribute1':'Info1',
-    'Attribute2':['Info2.1', 'Info2.2', 'Info2.3'],
-    'Attribute3':{'Attribute3.1':'Info3.1'
-                  'Attribute3.2':['Info3.2.1', 'Info3.2.2', 'Info3.2.3']
-                  },
-                  and so on.......
-    }
-
-   We apply the knowledge of Nested Data Structures Handling, which is crucial when dealing with JSON files.
-
-   Finally we use this knowledge to fetch the necessary columns of data and print and display them as we need.
-   #API Hanlding, #IPython console image display, #getpass
-
-### Events Scraper
-   This file, is an example of handling the different types of data that can be fetch from any website. 
-   For this example, we have utilized, the events page of George Washington Unniversity.
-
-   The website will provide us with HTML page. We will parse this HTML data with the use of the BeautifulSoup package available in Python. 
-
-   The fetch_url() function shows how a url can be customized based on user input. As shown, if we wish to fetch data for only some particular date/month/year we can do that by passing the necessary parameters to the link.
-
-
-   Once we do that, we can fetch the content from the url. 
-   The data returned is in html format. We use bs4 to help us look for data within the html page. 
-
-   With this, we can use the classes, content tags, and more to search and fetch the necessary data.
-
-   Finally, we apply our datastructures and data handling skills from previous experience to print the data as and how we need to.
-
-   
-
-## My Projects
-### Google Playstore Analysis
-... more to come :)
-      
+---
+*Built while re-learning Python's data-science stack — pandas, seaborn, plotly — on a real, messy, 2M-row dataset.*
